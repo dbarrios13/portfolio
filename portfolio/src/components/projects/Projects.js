@@ -6,10 +6,17 @@ export default class Projects extends React.Component {
 
 
     render() {
-        return(
-            <div className='projects'>
+        return (
+            <div className='container'>
                 <Navigation />
-                <h2>Projects</h2>
+                <div className='projects'>
+                    <h2>Projects</h2>
+                    <div><h3>project</h3></div>
+                    <div><h3>project</h3></div>
+                    <div><h3>project</h3></div>
+                    <div><h3>project</h3></div>
+                    <div><h3>project</h3></div>
+                </div>
             </div>
         )
     }

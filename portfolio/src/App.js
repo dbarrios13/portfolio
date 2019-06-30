@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom'
-import './App.sass';
+import './styles/index.sass';
 
 // import components
 import Welcome from './components/welcome/Welcome'
