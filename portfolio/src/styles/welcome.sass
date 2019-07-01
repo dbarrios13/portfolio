@@ -1,50 +1,61 @@
 .welcome 
     display: flex
-    flex-direction: column
+    // flex-direction: column
     justify-content: center
     // background-image: linear-gradient($primary-color, $secondary-color)
     background: $primary-color
-    align-items: center
-    height: 100vh
+    // align-items: center
+    height: 100%
+    width: 100%
+    position: absolute
     font-family: $primary-font
     color: $third-color
-    animation: welcome 2s ease
+    // animation: welcome 2s ease
 
-    @keyframes welcome 
-        0% { opacity: 0 }
-        100% { opacity: 1 }
+    // @keyframes welcome 
+    //     0% { opacity: 0 }
+    //     100% { opacity: 1 }
 
-    h1 
-        font-size: 3rem
-        margin-bottom: 15px
-        position: relative
-        right: 0
-        animation: slide-left 4s ease
+    // h1 
+    //     font-size: 3rem
+    //     margin-bottom: 15px
+    //     position: relative
+    //     right: 0
+    //     animation: slide-left 4s ease
 
-    h3 
-        font-size: 1.2rem
-        margin-bottom: 20px
-        position: relative
-        left: 0
-        animation: slide-right 4s ease
+    // h3 
+    //     font-size: 1.2rem
+    //     margin-bottom: 20px
+    //     position: relative
+    //     left: 0
+    //     animation: slide-right 4s ease
 
-    a
-        border: 1px solid $third-color
-        color: $third-color
-        border-radius: 50%
-        // background-color: inherit
-        height: 70px
-        width: 70px
-        font-size: 0.8rem
-        display: flex
-        justify-content: center
-        align-items: center
-        position: relative
-        bottom: 0
-        text-decoration: none
-        animation: slide-up 4s ease
+    // a
+    //     border: 1px solid $third-color
+    //     color: $third-color
+    //     border-radius: 50%
+    //     // background-color: inherit
+    //     height: 70px
+    //     width: 70px
+    //     font-size: 0.8rem
+    //     display: flex
+    //     justify-content: center
+    //     align-items: center
+    //     position: relative
+    //     bottom: 0
+    //     text-decoration: none
+    //     animation: slide-up 4s ease
 
-        &:hover
-            color: $fourth-color
-            border-color: $fourth-color
-        
+    //     &:hover
+    //         color: $fourth-color
+    //         border-color: $fourth-color
+    .logo
+        margin: auto
+        .vert
+            transform-origin: center bottom
+        .hori
+            transform-origin: 0% 50%
+        .diag-left
+            transform-origin: 100% 100%
+        .diag-right
+            transform-origin: 100% 0%
