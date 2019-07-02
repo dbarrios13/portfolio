@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Dpath(props) {
+export default function Dpath(props){
     const { x, y, smaller, bigger } = props
     let s = smaller
     let b = bigger
@@ -15,7 +15,7 @@ export default function Dpath(props) {
                 <path d={`M${x + 32 / s},${y}, L${x + 47 / s},${y + 20 / s}`} className='line diag-right' strokeLinecap='square'></path>
                 <path d={`M${x + 32 / s},${y + 100 / s}, L${x + 47 / s},${y + 80 / s}`} className='line diag-left' strokeLinecap='square'></path>
                 <path d={`M${x + 47 / s},${y + 20 / s}, L${x + 47 / s},${y + 80 / s}`} className='line vert' strokeLinecap='square'></path>
-                /* inline of the letter D */
+                {/* inline of the letter D */}
                 <path d={`M${x + 12 / s},${y + 20 / s}, L${x + 12 / s},${y + 80 / s}`} className='line vert' strokeLinecap='square'></path>
                 <path d={`M${x + 12 / s},${y + 20 / s}, L${x + 27 / s},${y + 20 / s}`} className='line hori' strokeLinecap='square'></path>
                 <path d={`M${x + 12 / s},${y + 80 / s}, L${x + 27 / s},${y + 80 / s}`} className='line hori' strokeLinecap='square'></path>
@@ -33,7 +33,7 @@ export default function Dpath(props) {
                 <path d={`M${x + 32 * b},${y}, L${x + 47 * b},${y + 20 * b}`} className='line diag-right' strokeLinecap='square'></path>
                 <path d={`M${x + 32 * b},${y + 100 * b}, L${x + 47 * b},${y + 80 * b}`} className='line diag-left' strokeLinecap='square'></path>
                 <path d={`M${x + 47 * b},${y + 20 * b}, L${x + 47 * b},${y + 80 * b}`} className='line vert' strokeLinecap='square'></path>
-                /* inline of the letter D */
+                {/* inline of the letter D  */}
                 <path d={`M${x + 12 * b},${y + 20 * b}, L${x + 12 * b},${y + 80 * b}`} className='line vert' strokeLinecap='square'></path>
                 <path d={`M${x + 12 * b},${y + 20 * b}, L${x + 27 * b},${y + 20 * b}`} className='line hori' strokeLinecap='square'></path>
                 <path d={`M${x + 12 * b},${y + 80 * b}, L${x + 27 * b},${y + 80 * b}`} className='line hori' strokeLinecap='square'></path>

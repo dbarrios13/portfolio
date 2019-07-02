@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Apath(props) {
+export default function Apath (props){
     const { x, y, smaller, bigger } = props
     let s = smaller
     let b = bigger

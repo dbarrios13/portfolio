@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Vpath(props) {
+export default function Vpath (props){
     const { x, y, smaller, bigger } = props
     let s = smaller
     let b = bigger

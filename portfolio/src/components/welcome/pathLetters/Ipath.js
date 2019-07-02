@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Ipath(props) {
+export default function Ipath (props){
     const { x, y, smaller, bigger } = props
     let s = smaller
     let b = bigger
