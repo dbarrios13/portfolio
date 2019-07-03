@@ -1,12 +1,8 @@
 .welcome 
     display: flex
-    flex-direction: column
-    justify-content: center
-    background: $primary-color
     height: 100%
     width: 100%
     position: absolute
-    font-family: $primary-font
     .logo
         margin: auto
         .vert
@@ -24,3 +20,6 @@
         font-size: 2rem
         font-family: $primary-font
         cursor: pointer
+        @media (max-width: 400px)
+            font-size: 5rem
+        
