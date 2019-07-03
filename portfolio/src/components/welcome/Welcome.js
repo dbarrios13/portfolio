@@ -16,95 +16,67 @@ export default class Welcome extends React.Component {
 
     componentDidMount() {
         const lines = document.querySelectorAll('.line')
-        const subtitles = Array.from(document.querySelectorAll('.subtitle'))
         const letters = document.querySelectorAll('.letters')
-        let elements = []
-
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            elements.push(lines)
-            subtitles.map(e => {
-               return e.classList.add('active')
-            })
-        } else {
-            subtitles.map(e => {
-                if (e.classList.contains('active')) {
-                    return e.classList.remove('active')
-                } else {
-                    return e;
-                }
-            })
-            elements.push(lines)
-            elements.push(letters)
-        }
 
         const logoAnimation = anime.timeline({
             direction: 'alternate',
             loop: false
         })
 
-        logoAnimation.add({
-            targets: elements,
-            translateX: target => {
-                let x = 1200
-                let translate;
-                if (target.classList.contains('hori')) {
-                    translate = anime.random(0, 1) ? x : -x
-                }
-                if (target.classList.contains('diag-right') || target.classList.contains('diag-left')) {
-                    translate = x / 3
-                }
-                return [translate, 0]
-            },
-            translateY: target => {
-                let y = 1200
-                let translate
-                if (target.classList.contains('vert')) {
-                    translate = anime.random(0, 1) ? y : -y
-                }
-                if (target.classList.contains('diag-right')) {
-                    translate = -y / 3
-                }
-                if (target.classList.contains('diag-left')) {
-                    translate = y / 3
-                }
-                return [translate, 0]
-            },
-            scale: {
-                value: [4, 1],
-                duration: 500
-            },
-            stroke: '#66fcf1',
-            opacity: {
-                value: [0, 1],
-                duration: 100
-            },
-            delay: (t, i) => (i * 25),
-            duration: 500,
-            easing: 'easeOutQuart',
-            offset: 0
-        })
-        
-        .add({
-            targets: '.active text',
-            translateX: () => {
-                let translate = 1200
-                // let translate = anime.random(0, 1200)
-                return [0, translate]
-            },
-            translateY: () => {
-                // let translate = anime.random(-1200, 1200)
-                let translate = 1200
-                return [0, translate]
-            },
-            opacity: {
-                value: [0, 1],
-                duration: 100
-            },
-            delay: (t, i) => (i * 50),
-            duration: 500 * 2,
-            easing: 'easeOutQuart',
-            offset: 0
-        })
+        logoAnimation
+            .add({
+                targets: lines,
+                translateX: target => {
+                    let x = 1200
+                    let translate;
+                    if (target.classList.contains('hori')) {
+                        translate = anime.random(0, 1) ? x : -x
+                    }
+                    if (target.classList.contains('diag-right') || target.classList.contains('diag-left')) {
+                        translate = x / 3
+                    }
+                    return [translate, 0]
+                },
+                translateY: target => {
+                    let y = 1200
+                    let translate
+                    if (target.classList.contains('vert')) {
+                        translate = anime.random(0, 1) ? y : -y
+                    }
+                    if (target.classList.contains('diag-right')) {
+                        translate = -y / 3
+                    }
+                    if (target.classList.contains('diag-left')) {
+                        translate = y / 3
+                    }
+                    return [translate, 0]
+                },
+                scale: {
+                    value: [4, 1],
+                    duration: 500
+                },
+                stroke: '#66fcf1',
+                opacity: {
+                    value: [0, 1],
+                    duration: 100
+                },
+                delay: (t, i) => (i * 25),
+                duration: 500,
+                easing: 'easeOutQuart',
+                offset: 0
+            })
+
+            .add({
+                targets: [letters, '.subtitle path'],
+                opacity: {
+                    value: [0, 1],
+                    duration: 100
+                },
+                delay: (t, i) => (i * 50),
+                duration: 500 * 2,
+                easing: 'easeOutQuart',
+                offset: 0
+            })
     }
 
     toProjects = () => {
@@ -116,9 +88,21 @@ export default class Welcome extends React.Component {
         const lines = document.querySelectorAll('.line')
         const letters = document.querySelectorAll('.letters')
 
-        logoAnimation.add(
-            {
-                targets: [lines, letters],
+        logoAnimation
+            .add({
+                targets: [letters, '.subtitle path'],
+                opacity: {
+                    value: [1, 0],
+                    duration: 100
+                },
+                // delay: (t, i) => (i * 50),
+                delay: anime.stagger(30, { direction: 'reverse' }),
+                duration: 500,
+                easing: 'easeInQuart',
+                offset: 0
+            })
+            .add({
+                targets: lines,
                 translateX: target => {
                     let x = 1200
                     let translate;
@@ -129,7 +113,6 @@ export default class Welcome extends React.Component {
                         translate = x / 3
                     }
                     return [0, translate]
-
                 },
                 translateY: target => {
                     let y = 1200
@@ -147,19 +130,18 @@ export default class Welcome extends React.Component {
                 },
                 scale: {
                     value: [1, 4],
-                    duration: 500 * 2
+                    duration: 500
                 },
                 stroke: '#66fcf1',
                 opacity: {
                     value: [1, 0],
                     duration: 100 * 4
                 },
-                delay: anime.stagger(20, { direction: 'reverse' }),
+                delay: anime.stagger(15, { direction: 'reverse' }),
                 duration: 500,
                 easing: 'easeInQuart',
                 offset: 0
-            }
-        )
+            })
         setTimeout(() => {
             this.props.history.push('/projects')
         }, 4000)
@@ -203,6 +185,10 @@ export default class Welcome extends React.Component {
                     </g>
                     <g className='subtitle' stroke='#66fcf1' strokeWidth='1' fill='none' fillRule='evenodd'>
                         <a href={this.toProjects} onClick={this.toProjects}>
+                            <path d='M445,320 L575,320' strokeLinecap='round'></path>
+                            <path d='M575,320 L575,360' strokeLinecap='round'></path>
+                            <path d='M575,360 L445,360' strokeLinecap='round'></path>
+                            <path d='M445,360 L445,320' strokeLinecap='round'></path>
                             <text x='450' y='350' className='letters hori link'>P</text>
                             <text x='470' y='350' className='letters vert link'>r</text>
                             <text x='483' y='350' className='letters diag-left link'>o</text>
