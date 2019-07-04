@@ -171,22 +171,22 @@ export default class Welcome extends React.Component {
                         <Spath x={800} y={100} />
                     </g>
                     <g className='subtitle' stroke='#66fcf1' strokeWidth='2' fill='none' fillRule="evenodd">
-                        <text x='244' y='275' className='letters hori' >S</text>
-                        <text x='279' y='275' className='letters vert' >o</text>
-                        <text x='314' y='275' className='letters diag-right' >f</text>
-                        <text x='339' y='275' className='letters diag-left' >t</text>
-                        <text x='364' y='275' className='letters hori' >w</text>
-                        <text x='414' y='275' className='letters vert' >a</text>
-                        <text x='444' y='275' className='letters diag-left' >r</text>
-                        <text x='469' y='275' className='letters diag-right' >e</text>
-                        <text x='524' y='275' className='letters diag-left' >E</text>
-                        <text x='559' y='275' className='letters vert' >n</text>
-                        <text x='594' y='275' className='letters diag-right' >g</text>
-                        <text x='629' y='275' className='letters hori' >i</text>
-                        <text x='644' y='275' className='letters vert' >n</text>
-                        <text x='679' y='275' className='letters hori' >e</text>
-                        <text x='714' y='275' className='letters diag-right' >e</text>
-                        <text x='749' y='275' className='letters diag-left' >r</text>
+                        <text x='244' y={275 + mY * 0.5} className='letters hori' >S</text>
+                        <text x='279' y={275 + mY * 0.5} className='letters vert' >o</text>
+                        <text x='314' y={275 + mY * 0.5} className='letters diag-right' >f</text>
+                        <text x='339' y={275 + mY * 0.5} className='letters diag-left' >t</text>
+                        <text x='364' y={275 + mY * 0.5} className='letters hori' >w</text>
+                        <text x='414' y={275 + mY * 0.5} className='letters vert' >a</text>
+                        <text x='444' y={275 + mY * 0.5} className='letters diag-left' >r</text>
+                        <text x='469' y={275 + mY * 0.5} className='letters diag-right' >e</text>
+                        <text x='524' y={275 + mY * 0.5} className='letters diag-left' >E</text>
+                        <text x='559' y={275 + mY * 0.5} className='letters vert' >n</text>
+                        <text x='594' y={275 + mY * 0.5} className='letters diag-right' >g</text>
+                        <text x='629' y={275 + mY * 0.5} className='letters hori' >i</text>
+                        <text x='644' y={275 + mY * 0.5} className='letters vert' >n</text>
+                        <text x='679' y={275 + mY * 0.5} className='letters hori' >e</text>
+                        <text x='714' y={275 + mY * 0.5} className='letters diag-right' >e</text>
+                        <text x='749' y={275 + mY * 0.5} className='letters diag-left' >r</text>
                     </g>
                     <g className='subtitle' stroke='#66fcf1' strokeWidth='1' fill='none' fillRule='evenodd'>
                         <a href={this.toProjects} onClick={this.toProjects}>
