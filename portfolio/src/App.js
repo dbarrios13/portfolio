@@ -4,18 +4,13 @@ import './styles/index.sass';
 
 // import components
 import Welcome from './components/welcome/Welcome'
-import Projects from './components/projects/Projects'
-import About from './components/about/About'
-import Contact from './components/contact/Contact'
-
+import Main from './components/Main/Main'
 
 function App() {
   return (
     <div className="App">
       <Route exact path='/' component={Welcome}/>
-      <Route path='/projects' component={Projects}/>
-      <Route path='/about' component={About}/>
-      <Route path='/contact' component={Contact}/>
+      <Route path='/projects' component={Main}/>
     </div>
   );
 }

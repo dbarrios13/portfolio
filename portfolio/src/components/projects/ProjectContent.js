@@ -3,7 +3,7 @@ import React from 'react';
 export default function ProjectContent (props) {
     const {name, p, list, aos, github, orderNums} = props.data
     let num
-    if(window.screen.width < 550) {
+    if(window.screen.width < 800) {
         num = 0
     } else {
         num = orderNums[0]
