@@ -12,10 +12,10 @@ export default class Contact extends React.Component {
         return (
             <div id='contact' className='contact'>
                 <div className='form' data-aos='fade-up' data-aos-duration>
-                    <form name='contact' method='POST' data-netlify='true'>
-                        <input name='name' type='text' placeholder='Name' />
-                        <input name='email' type='email' placeholder='Email' />
-                        <textarea name='message' placeholder='Message'></textarea>
+                    <form name='contact' action='https://getform.io/f/e51ce0d0-5e18-4740-acb2-44158d85e3f9' method='POST' netlify>
+                        <input name='name' type='text' placeholder='Name'  required />
+                        <input name='email' type='email' placeholder='Email'  required />
+                        <textarea name='message' placeholder='Message' required ></textarea>
                         <button type='submit'>Send Message</button>
                     </form>
                 </div>
