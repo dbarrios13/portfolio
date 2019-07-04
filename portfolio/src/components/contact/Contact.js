@@ -23,7 +23,7 @@ export default class Contact extends React.Component {
                     <h3>Contact</h3>
                     <p>Feel free to send me a message about any questions you may have or just to get in contact with me. Thank you for visiting my portfolio and I look forward to speaking with you soon.</p>
                 </div>
-                <div className='btn' data-aos='fade-up' data-aos-duration>
+                <div className='btn'>
                     <button onClick={this.scrollTop} className='btn-top'>Back to Top</button>
                 </div>
             </div>
