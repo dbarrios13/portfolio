@@ -190,18 +190,18 @@ export default class Welcome extends React.Component {
                     </g>
                     <g className='subtitle' stroke='#66fcf1' strokeWidth='1' fill='none' fillRule='evenodd'>
                         <a href={this.toProjects} onClick={this.toProjects}>
-                            <path d={`M${445 - 12 * mX},${320 + mY * 0.6} L${575 + 20 * mX},${320 + mY * 0.6}`} strokeLinecap='round'></path>
-                            <path d={`M${575 + 20 * mX},${320 + mY * 0.6} L${575 + 20 * mX},${360 + mY * 1.1}`} strokeLinecap='round'></path>
-                            <path d={`M${445 - 12 * mX},${360 + mY * 1.1} L${575 + 20 * mX},${360 + mY * 1.1}`} strokeLinecap='round'></path>
-                            <path d={`M${445 - 12 * mX},${320 + mY * 0.6} L${445 - 12 * mX},${360 + mY * 1.1}`} strokeLinecap='round'></path>
-                            <text x={`${450 - 12 * mX}`} y={`${350 + mY}`} className='letters hori link'>P</text>
-                            <text x={`${470 - 7 * mX}`} y={`${350 + mY}`} className='letters vert link'>r</text>
-                            <text x={`${483 - 4 * mX}`} y={`${350 + mY}`} className='letters diag-left link'>o</text>
-                            <text x={`${500 + mX}`} y={`${350 + mY}`} className='letters diag-right link'>j</text>
-                            <text x={`${508 + 2.5 * mX}`} y={`${350 + mY}`} className='letters vert link'>e</text>
-                            <text x={`${525 + 7.5 * mX}`} y={`${350 + mY}`} className='letters diag-right link'>c</text>
-                            <text x={`${542 + 11.6 * mX}`} y={`${350 + mY}`} className='letters diag-left link'>t</text>
-                            <text x={`${555 + 15 * mX}`} y={`${350 + mY}`} className='letters hori link'>s</text>
+                            <path d={`M${445 - 15 * mX},${320 + mY * 0.6} L${575 + 17 * mX},${320 + mY * 0.6}`} strokeLinecap='round'></path>
+                            <path d={`M${575 + 17 * mX},${320 + mY * 0.6} L${575 + 17 * mX},${360 + mY * 1.1}`} strokeLinecap='round'></path>
+                            <path d={`M${445 - 15 * mX},${360 + mY * 1.1} L${575 + 17 * mX},${360 + mY * 1.1}`} strokeLinecap='round'></path>
+                            <path d={`M${445 - 15 * mX},${320 + mY * 0.6} L${445 - 15 * mX},${360 + mY * 1.1}`} strokeLinecap='round'></path>
+                            <text x={`${450 - 15 * mX}`} y={`${350 + mY}`} className='letters hori link'>P</text>
+                            <text x={`${470 - 10 * mX}`} y={`${350 + mY}`} className='letters vert link'>r</text>
+                            <text x={`${483 - 7 * mX}`} y={`${350 + mY}`} className='letters diag-left link'>o</text>
+                            <text x={`${500 - 2 * mX}`} y={`${350 + mY}`} className='letters diag-right link'>j</text>
+                            <text x={`${508 - 0.5 * mX}`} y={`${350 + mY}`} className='letters vert link'>e</text>
+                            <text x={`${525 + 4.5 * mX}`} y={`${350 + mY}`} className='letters diag-right link'>c</text>
+                            <text x={`${542 + 8.6 * mX}`} y={`${350 + mY}`} className='letters diag-left link'>t</text>
+                            <text x={`${555 + 12 * mX}`} y={`${350 + mY}`} className='letters hori link'>s</text>
                         </a>
                     </g>
                 </svg>
