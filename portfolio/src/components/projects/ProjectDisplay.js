@@ -1,10 +1,16 @@
 import React from 'react';
 
 export default function ProjectDisplay (props) {
-    const {aos, img, orderNums} = props.data
+    const {aos, img, imgAlt, orderNums} = props.data
+    let num
+    if(window.screen.width < 550) {
+        num = 0
+    } else {
+        num = orderNums[1]
+    }
     return (
-        <div className='project display' style={{order: orderNums[1]}} data-aos={aos[1]} data-aos-duration>
-            <img src={img} />
+        <div className='project display' style={{order: num}} data-aos={aos[1]} data-aos-duration>
+            <img alt={imgAlt} src={img} />
         </div>
     )
 }
