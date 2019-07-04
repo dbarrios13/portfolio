@@ -2,9 +2,58 @@
     height: 100vh
     width: 80%
     display: flex
-    flex-direction: column
     justify-content: center
     align-items: center
+    flex-wrap: wrap
     margin: 0 auto
-    h3 
-        color: $third-color
+    color: $third-color
+    .form, .form-message
+        display: flex
+        align-items: center
+        height: 100%
+        width: 50%
+       
+    .form-message
+        height: 273px
+        flex-direction: column
+        align-items: flex-start
+        h3
+            font-size: 3rem
+            margin-bottom: 30px
+        p
+            font-size: 1rem
+            line-height: 2
+            color: $fifth-color
+    form
+        display: flex
+        flex-direction: column
+        margin: 0 auto
+        width: 60%
+        input, button, textarea
+            margin: 10px 0
+            border: none
+            border-radius: 5px
+            outline: none
+            padding: 10px
+        textarea
+            height: 100px
+        button
+            height: 30px 
+            cursor: pointer
+    .btn
+        width: 100%
+        .btn-top 
+            width: 10%
+            height: 5vh
+            display: flex
+            border-radius: 5px
+            justify-content: center
+            background: $third-color
+            margin: 0 auto 50px
+            color: $secondary-color
+            font-family: $primary-font
+            font-size: 1rem
+            cursor: pointer
+            @media (max-width: 800px)
+                font-size: 0.8rem
+                width: 30%

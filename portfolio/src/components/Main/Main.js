@@ -5,12 +5,6 @@ import ProjectDisplay from '../projects/ProjectDisplay'
 import About from '../about/About'
 import Contact from '../contact/Contact'
 import data from '../../data/dataProjects'
-import smoothscroll from 'smoothscroll-polyfill'
-
-function scrollTop () {
-    smoothscroll.polyfill()
-    window.scroll({top: 0, left: 0, behavior: 'smooth'})
-}
 
 export default function Main() {
     return (
@@ -28,7 +22,6 @@ export default function Main() {
             </div>
             <About />
             <Contact />
-            <button onClick={scrollTop} className='btn-top'>Back to Top</button>
         </>
     )
 }

@@ -8,7 +8,6 @@ function scroll (e) {
     document.querySelector(e.target.hash).scrollIntoView({ behavior: 'smooth'})
 }
 
-
 export default function Navigation() {
     return (
         <div className='nav'>
