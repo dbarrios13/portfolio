@@ -11,10 +11,10 @@ export default function Main() {
         <>
             <Navigation />
             <div id='projects' className='projects'>
-                {data.map(p => {
+                {data.map((p, index) => {
                     return (
                         <>
-                            <ProjectContent key={p.name} data={p} />
+                            <ProjectContent key={index} data={p} />
                             <ProjectDisplay key={p.id} data={p} />
                         </>
                     )

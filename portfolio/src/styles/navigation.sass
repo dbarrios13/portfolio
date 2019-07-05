@@ -4,28 +4,36 @@
     align-items: center
     padding: 20px 0
     font: 1.2rem $primary-font
-    position: relative
+    // background-image: linear-gradient($third-color, $secondary-color)
+    width: 100%
+    z-index: 5
+    // position: fixed
     top: 0
-    box-shadow: 0 4px 4px -3px $third-color
+    left: 0
+    // opacity: 0.7
+    // box-shadow: 0 4px 4px -3px $third-color
     a
         text-decoration: none
         color: $third-color 
         padding: 20px 15px
-        // border: 1px solid $third-color
         &:hover
             color: $fourth-color
             box-shadow: 0 4px 4px -3px $fourth-color
-
     .active
         color: $fourth-color
-
     .nav-brand
         a
             color: $third-color
             padding-left: 20px
-            
             &:hover
                 color: $fourth-color
-            
-    
-
+    .links
+    @keyframes appear 
+        0% { opacity: 0 }
+        100% { opacity: 1 }
+    @keyframes slideIn 
+        0% { transform: translateX(-2%) }
+        100% { transform: translateX(0) }
+    @keyframes shrink 
+        0% { width: 95% }
+        100% { width: 90% }
