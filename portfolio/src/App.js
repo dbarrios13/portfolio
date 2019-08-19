@@ -9,8 +9,8 @@ import Main from './components/Main/Main'
 function App() {
   return (
     <div className="App">
-      <Route exact path='/' component={Welcome}/>
-      <Route path='/projects' component={Main}/>
+      <Route exact path='/' component={Welcome} />
+      <Route path='/projects' component={Main} />
     </div>
   );
 }

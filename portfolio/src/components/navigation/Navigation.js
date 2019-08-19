@@ -2,10 +2,10 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import smoothscroll from 'smoothscroll-polyfill'
 
-function scroll (e) {
+function scroll(e) {
     e.preventDefault()
     smoothscroll.polyfill()
-    document.querySelector(e.target.hash).scrollIntoView({ behavior: 'smooth'})
+    document.querySelector(e.target.hash).scrollIntoView({ behavior: 'smooth' })
 }
 
 export default function Navigation() {
@@ -22,4 +22,3 @@ export default function Navigation() {
         </div>
     )
 }
-

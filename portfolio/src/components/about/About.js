@@ -11,7 +11,7 @@ export default function About() {
                 <p>HTML5, CSS, Sass/Scss, Less, JavaScript, React.js, Redux.js, Node.js, Express.js, SQLite, MySQL, Responsive Design and Git</p>
             </div>
             <div className='right' data-aos='zoom-out-up' data-aos-duration>
-                <img alt='David Barrios' src={meImg}/>
+                <img alt='David Barrios' src={meImg} />
             </div>
         </div>
     )
