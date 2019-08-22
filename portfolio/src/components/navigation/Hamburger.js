@@ -1,4 +1,6 @@
 import React from 'react';
+import Button from './hamburgerComponents/Button';
+import Menu from './hamburgerComponents/Menu';
 
 export default class Hamburger extends React.Component {
     state = {
@@ -19,9 +21,10 @@ export default class Hamburger extends React.Component {
 
     render () {
         return(
-            <div className=''>
-
-            </div>
+            <>
+                <Button />
+                <Menu />
+            </>
         )
     }
 }
