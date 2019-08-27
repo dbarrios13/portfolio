@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Route } from 'react-router-dom'
 import './styles/index.sass';
 
 // import components
@@ -22,8 +21,6 @@ export default class App extends Component {
       <div className="App" onScroll={this.handleScroll}>
         <Welcome />
         <Main scroll={this.state.scroll} />
-        {/* <Route exact path='/' component={Welcome} /> */}
-        {/* <Route path='/projects' component={Main} /> */}
       </div>
     );
   }
