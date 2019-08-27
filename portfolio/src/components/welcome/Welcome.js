@@ -78,74 +78,7 @@ export default class Welcome extends React.Component {
                 offset: 0
             })
     }
-
-    toProjects = () => {
-        const logoAnimation = anime.timeline({
-            direction: 'alternave',
-            loop: false
-        })
-
-        const lines = document.querySelectorAll('.line')
-        const letters = document.querySelectorAll('.letters')
-
-        logoAnimation
-            .add({
-                targets: [letters, '.subtitle path'],
-                opacity: {
-                    value: [1, 0],
-                    duration: 100
-                },
-                delay: anime.stagger(30, { direction: 'reverse' }),
-                duration: 500,
-                easing: 'easeInQuart',
-                offset: 0
-            })
-            .add({
-                targets: lines,
-                translateX: target => {
-                    let x = 1200
-                    let translate;
-                    if (target.classList.contains('hori')) {
-                        translate = anime.random(0, 1) ? x : -x
-                    }
-                    if (target.classList.contains('diag-right') || target.classList.contains('diag-left')) {
-                        translate = x / 3
-                    }
-                    return [0, translate]
-                },
-                translateY: target => {
-                    let y = 1200
-                    let translate
-                    if (target.classList.contains('vert')) {
-                        translate = anime.random(0, 1) ? y : -y
-                    }
-                    if (target.classList.contains('diag-right')) {
-                        translate = -y / 3
-                    }
-                    if (target.classList.contains('diag-left')) {
-                        translate = y / 3
-                    }
-                    return [0, translate]
-                },
-                scale: {
-                    value: [1, 4],
-                    duration: 500
-                },
-                stroke: '#66fcf1',
-                opacity: {
-                    value: [1, 0],
-                    duration: 100 * 4
-                },
-                delay: anime.stagger(15, { direction: 'reverse' }),
-                duration: 500,
-                easing: 'easeInQuart',
-                offset: 0
-            })
-        setTimeout(() => {
-            this.props.history.push('/projects')
-        }, 4000)
-    }
-
+    
     render() {
         let mX = 0
         let mY = 0
@@ -189,20 +122,16 @@ export default class Welcome extends React.Component {
                         <text x='749' y={275 + mY * 0.5} className='letters diag-left' >r</text>
                     </g>
                     <g className='subtitle' stroke='#66fcf1' strokeWidth='1' fill='none' fillRule='evenodd'>
-                        <a href={this.toProjects} onClick={this.toProjects}>
-                            <path d={`M${445 - 15 * mX},${320 + mY * 0.6} L${575 + 17 * mX},${320 + mY * 0.6}`} strokeLinecap='round'></path>
-                            <path d={`M${575 + 17 * mX},${320 + mY * 0.6} L${575 + 17 * mX},${360 + mY * 1.1}`} strokeLinecap='round'></path>
-                            <path d={`M${445 - 15 * mX},${360 + mY * 1.1} L${575 + 17 * mX},${360 + mY * 1.1}`} strokeLinecap='round'></path>
-                            <path d={`M${445 - 15 * mX},${320 + mY * 0.6} L${445 - 15 * mX},${360 + mY * 1.1}`} strokeLinecap='round'></path>
-                            <text x={`${450 - 15 * mX}`} y={`${350 + mY}`} className='letters hori link'>P</text>
-                            <text x={`${470 - 10 * mX}`} y={`${350 + mY}`} className='letters vert link'>r</text>
-                            <text x={`${483 - 7 * mX}`} y={`${350 + mY}`} className='letters diag-left link'>o</text>
-                            <text x={`${500 - 2 * mX}`} y={`${350 + mY}`} className='letters diag-right link'>j</text>
-                            <text x={`${508 - 0.5 * mX}`} y={`${350 + mY}`} className='letters vert link'>e</text>
-                            <text x={`${525 + 4.5 * mX}`} y={`${350 + mY}`} className='letters diag-right link'>c</text>
-                            <text x={`${542 + 8.6 * mX}`} y={`${350 + mY}`} className='letters diag-left link'>t</text>
-                            <text x={`${555 + 12 * mX}`} y={`${350 + mY}`} className='letters hori link'>s</text>
-                        </a>
+                        <text x={`${450 - 15 * mX}`} y={`${350 + mY}`} className='letters hori link'>P</text>
+                        <text x={`${470 - 10 * mX}`} y={`${350 + mY}`} className='letters vert link'>r</text>
+                        <text x={`${483 - 7 * mX}`} y={`${350 + mY}`} className='letters diag-left link'>o</text>
+                        <text x={`${500 - 2 * mX}`} y={`${350 + mY}`} className='letters diag-right link'>j</text>
+                        <text x={`${508 - 0.5 * mX}`} y={`${350 + mY}`} className='letters vert link'>e</text>
+                        <text x={`${525 + 4.5 * mX}`} y={`${350 + mY}`} className='letters diag-right link'>c</text>
+                        <text x={`${542 + 8.6 * mX}`} y={`${350 + mY}`} className='letters diag-left link'>t</text>
+                        <text x={`${555 + 12 * mX}`} y={`${350 + mY}`} className='letters hori link'>s</text>
+                        <path d={`M${510 + mX},${380 + 2 * mY} L${510 + mX},${400 + 2.5 * mY}`}></path>
+                        <path d={`M${505 - mX},${395 + 2.25 * mY} L${510 + mX},${400 + 2.5 * mY} L${515 + 3 * mX},${395 + 2.25 * mY}`}></path>
                     </g>
                 </svg>
             </div>

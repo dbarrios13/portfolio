@@ -1,10 +1,11 @@
 import React from 'react'
 import smoothscroll from 'smoothscroll-polyfill'
 
-function scroll(e) {
+function scroll(e, props) {
     e.preventDefault()
     smoothscroll.polyfill()
     document.querySelector(e.target.hash).scrollIntoView({ behavior: 'smooth' })
+    props.close()
 }
 
 export default function Menu() {

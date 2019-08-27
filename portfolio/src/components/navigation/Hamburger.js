@@ -23,7 +23,7 @@ export default class Hamburger extends React.Component {
         return(
             <>
                 <Button />
-                <Menu />
+                <Menu close={this.linkClick}/>
             </>
         )
     }

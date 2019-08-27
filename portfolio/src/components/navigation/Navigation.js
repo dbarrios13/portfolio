@@ -1,12 +1,11 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import Hamburger from './Hamburger'
 
 export default function Navigation() {
     return (
-        <div className='nav'>
+        <div className='nav' data-aos='fade' data-aos-delay='1000'>
             <div className='nav-brand'>
-                <NavLink to='/'>David Barrios</NavLink>
+                <h1>David Barrios</h1>
             </div>
             <Hamburger />
         </div>

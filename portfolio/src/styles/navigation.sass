@@ -1,13 +1,8 @@
 .nav 
     display: flex
-    // justify-content: space-between
-    // align-items: center
     padding: 20px 0
     font: 1.5rem $primary-font
-    // width: 100%
     z-index: 5
-    // top: 0
-    // left: 0
     a
         text-decoration: none
         color: $third-color 
@@ -15,25 +10,20 @@
     .active
         color: $fourth-color
     .nav-brand
-        a
-            color: $third-color
-            padding-left: 20px
-            &:hover
-                color: $fourth-color
-    .links
-    @keyframes appear 
-        0% { opacity: 0 }
-        100% { opacity: 1 }
-    @keyframes slideIn 
-        0% { transform: translateX(-2%) }
-        100% { transform: translateX(0) }
-    @keyframes shrink 
-        0% { width: 95% }
-        100% { width: 90% }
+        position: fixed
+        top: 0
+        left: 0
+        color: $third-color
+        z-index: 101
+        padding: 20px 0 0 20px
+        &:hover
+            color: $fourth-color
 
 .hamburgerBtn 
     position: fixed
-    right: 30px
+    top: 0
+    right: 0
+    padding: 20px 20px 0 0
     z-index: 101
     span
         display: inline-block
@@ -109,6 +99,8 @@
         justify-content: center
         align-items: center
         background-color: $fifth-color
+        @media #{$mobile}
+            width: 60vw
         li
             padding-bottom: 30px
         a

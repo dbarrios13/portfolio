@@ -6,10 +6,10 @@ import About from '../about/About'
 import Contact from '../contact/Contact'
 import data from '../../data/dataProjects'
 
-export default function Main() {
+export default function Main(props) {
     return (
         <>
-            <Navigation />
+            <Navigation scroll={props.scroll} />
             <div id='projects' className='projects'>
                 {data.map((p, index) => {
                     return (
