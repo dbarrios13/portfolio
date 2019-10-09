@@ -42,6 +42,8 @@
                 color: $fourth-color
         @media #{$tablet}
             justify-content: flex-end
+        @media #{$mobile}
+            justify-content: flex-start
     .display
         display: flex
         justify-content: center
@@ -56,3 +58,10 @@
         @media #{$mobile}
             margin-bottom: 0
             align-items: center
+#coming-soon
+    width: 100%
+    text-align: center
+    h2
+        margin-bottom: 20px
+        color: $third-color
+        font-size: 3rem

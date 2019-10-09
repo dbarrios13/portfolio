@@ -20,6 +20,9 @@ export default function Main(props) {
                     )
                 })}
             </div>
+            <div id='coming-soon'>
+                <h2>More Projects coming soon</h2>
+            </div>
             <About />
             <Contact />
         </>

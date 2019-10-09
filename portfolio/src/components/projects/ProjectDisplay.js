@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function ProjectDisplay (props) {
-    const {aos, img, imgAlt, orderNums} = props.data
+    const {aos, img, orderNums} = props.data
     let num
     if(window.screen.width < 800) {
         num = 0
@@ -10,7 +10,9 @@ export default function ProjectDisplay (props) {
     }
     return (
         <div className='project display' style={{order: num}} data-aos={aos[1]} data-aos-duration>
-            <img alt={imgAlt} src={img} />
+            <video autoPlay loop width='100%' controls>
+                <source src={img} type='video/mp4' /> 
+            </video>
         </div>
     )
 }
