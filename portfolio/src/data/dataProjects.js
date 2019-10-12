@@ -17,7 +17,7 @@ const data = [
     {
         id: 2,
         name: 'Front End React App',
-        p: 'A progressive web app that allows users to keep track of trips and expensives all in one place. I was able to work on the front end of the project and implement all the current features, while my teammate created the back-end database and server.',
+        p: 'A progressive web app that allows users to keep track of trips and expenses all in one place. I was able to work on the front end of the project and implement all the current features, while my teammate created the back-end database and server.',
         list: ['React', 'Redux', 'Sass', 'Reactstrap'],
         img: splittrip,
         imgAlt: 'gif of the react app',
